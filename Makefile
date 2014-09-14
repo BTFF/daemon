@@ -6,7 +6,8 @@ all: daemon
 daemon: daemon.o
 	$(CC) $(LFLAGS) -o $@ $^
 
-clear:
+clean:
+	rm -rf daemon *.o
 
 dep:
 	$(CC) $(CFLAGS) -M *.c *.h > .depend
